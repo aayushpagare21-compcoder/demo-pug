@@ -1,0 +1,49 @@
+doctype html 
+html
+    head 
+        style 
+            include ../static/style.css 
+body 
+    nav#navbar
+        ul 
+            li #[a(href="#") HOME] 
+            li #[a(href="#") ABOUT] 
+            li #[a(href="#") CONTACT] 
+            li #[a(href="#") SERVICES]
+        ul   
+
+    section#intro 
+        div#head
+            | Aayush Coding Academy 
+        small#headsmall 
+            | (talk is cheap show me the code)
+    section#courses
+        h2#headcourses Our Courses 
+        div.card-wrapper 
+            div.card 
+                div.headimg   
+                    img(src="/static/cpp2.jpg") 
+                div.headcard    
+                    | Problem Solving With C++ 
+            div.card 
+                div.headimg  
+                    img(src='/static/mean.jpg') 
+                div.headcard 
+                    | Web-Development MEAN Stack
+            div.card 
+                div.headimg  
+                    img(src='/static/apt.jpg') 
+                div.headcard 
+                    | Numerical and Verbal Aptitude
+    section#footer 
+        div#forms  
+            h2 
+                | REGISTER NOW
+            form#f(action='/' method='POST') 
+                input(type='text' name='name' placeholder='Enter your Name')
+                input(type='email' name='mail' placeholder='Enter your mail')
+                input(type='text' name='phone' placeholder='Enter your phone')
+                input#s(type='submit' name='submit' placeholder='Register')
+
+    script 
+        include ../static/index.js 

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+#navbar {
+  background-color: rgb(2, 21, 2);
+  padding: 1rem;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navbar li a {
+  text-decoration: none;
+  padding: 1rem;
+  margin-right: 20px;
+  color: azure;
+}
+
+#navbar li a:hover{ 
+    color: aqua;
+}
+#intro { 
+  background: center / cover no-repeat url("../static/bg3.png");
+  height: 400px;  
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;  
+} 
+
+#head { 
+    margin-top: 14rem;  
+    font-size: 2rem;
+    color: azure;
+}  
+#head:hover { 
+    color: aqua;
+} 
+
+#headsmall { 
+    color: azure; 
+    /* margin-bottom: 2rem; */
+ } 
+
+ #headsmall:hover { 
+     color: aqua;
+ }
+
+#courses {
+  height: 600px;
+  background-color: aqua; 
+}
+
+#footer {
+  height: 300px;
+  background-color: black;
+}
+
+#headcourses {  
+    padding: 2rem;
+    text-align: center;  
+    /* color: white; */ 
+}
+.card-wrapper {  
+    margin: 2rem;
+    display: flex;  
+    align-items: center; 
+    justify-content: center; 
+    /* background-color: black; */
+} 
+
+.card { 
+    border: 2px solid black;  
+    margin-right: 2rem; 
+    background-color: black;  
+    padding: 1rem;
+    border-radius: 1rem;
+}  
+
+.headimg img { 
+    width: 300px; 
+    height: 300px;
+} 
+  
+.headcard {  
+    margin-top: 1rem;
+    text-align: center; 
+    color: azure;  
+    /* background-color: black; */
+} 
+
+.headcard:hover { 
+    color: aqua;
+} 
+
+#footer #forms #f { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 1rem; 
+    padding-top: 2rem;  
+    /* margin-top: 1rem; */
+} 
+
+#footer #forms #f input { 
+    width: 600px; 
+    text-align: center; 
+    margin-bottom: 1rem; 
+    border-radius: 10px;
+} 
+
+#footer #forms h2{   
+    padding-top: 1rem;
+    text-align: center;
+    color: azure;
+} 
+
+#footer #forms #f #s { 
+    background-color: aqua; 
+    color: black; 
+    width: 100px; 
+}
+#footer #forms #f #s:hover { 
+    background-color: white; 
+}
