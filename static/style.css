@@ -34,7 +34,7 @@
     color: aqua;
 }
 #intro { 
-  background: center / cover no-repeat url("../static/bg3.png");
+  background: center / cover no-repeat url("../static/images/bg3.png");
   height: 400px;  
   display: flex; 
   flex-direction: column;
