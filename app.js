@@ -12,7 +12,23 @@ app.use(express.urlencoded()); //We grab the data in urlencoded form
 
 //Code for PUG 
 app.set('view-engine', 'pug') //Set template engine pug 
-app.set('views', path.join(__dirname, 'views')); //Set views directory 
+app.set('views', path.join(__dirname, 'views')); //Set views directory  
+
+//Mongoose code 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/db'); 
+const bodyparser = require('body-parser'); 
+
+
+//Define Mongoose Schema 
+var contactSchema = new mongoose.Schema({ 
+    name : String, 
+    mail : String, 
+    phone : String
+}); 
+
+var Contact = mongoose.model('Contact', contactSchema);
+
 
 //Endpoints 
 app.get('/', (req, res)=> {  
@@ -23,13 +39,21 @@ app.get('/', (req, res)=> {
 app.post('/', (req, res) =>{ 
     let name = req.body.name;
     let email = req.body.mail;
-    let phone = req.body.phone; 
+    let phone = req.body.phone;  
 
-    let str = `name = ${name}, email = ${email}, phone=${phone}\n`;  
+    var myData = new Contact(req.body); 
 
-    fs.appendFileSync('db.txt', str);  
+    myData.save().then(()=> {
+        res.send("This item is sent");
+    }).catch(()=> { 
+        res.status(400).send("not saved");
+    });
+ 
+    // let str = `name = ${name}, email = ${email}, phone=${phone}\n`;  
 
-    console.log(str);
+    // fs.appendFileSync('db.txt', str);  
+
+    // console.log(str);
 
     res.status(200).render('index.pug');
 });
